@@ -1,0 +1,97 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "f2ccbf0e-6adf-471d-8208-d0fadc86bf73": {
+        "id": "f2ccbf0e-6adf-471d-8208-d0fadc86bf73",
+        "parent": null,
+        "name": "webhook-aws",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "cfac6827-50ac-43ed-ae61-eae2f348f161"
+        ],
+        "isRemovable": false,
+        "filePath": "webhook-aws"
+      },
+      "cfac6827-50ac-43ed-ae61-eae2f348f161": {
+        "id": "cfac6827-50ac-43ed-ae61-eae2f348f161",
+        "parent": "f2ccbf0e-6adf-471d-8208-d0fadc86bf73",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "webhook-aws/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "apigusEast1webhookwebhookpost",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "timeout": 60,
+          "memory": 128
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "f2ccbf0e-6adf-471d-8208-d0fadc86bf73",
+    "openFiles": [
+      "cfac6827-50ac-43ed-ae61-eae2f348f161"
+    ],
+    "currentFileId": "cfac6827-50ac-43ed-ae61-eae2f348f161",
+    "resources": {
+      "apigusEast1webhookwebhookpost": {
+        "name": "apigusEast1webhookwebhookpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "webhook",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "webhook",
+          "resourcePath": "/webhook",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "prod"
+        },
+        "globallyEditable": false
+      }
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    },
+    "lambdaId": "cfac6827-50ac-43ed-ae61-eae2f348f161"
+  },
+  "PROJECT_META": {
+    "projectName": "webhook-aws",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1544420654348
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "webhook-aws",
+      "url": "https://github.com/janakaud/webhook-aws"
+    }
+  }
+}
